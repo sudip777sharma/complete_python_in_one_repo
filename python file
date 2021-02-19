@@ -1,0 +1,198 @@
+import math
+print("hello")
+print(5+6)
+print(math.gcd(4,12))
+a=34
+b=45.32
+print(a+b)
+typeA=type(a)
+print(typeA)
+e="31"
+e=int(e)
+print(e)
+e=str(a)
+print(e)
+name="sudeep        "
+print(name)
+s='''sudeep 
+           is 
+              a 
+                good boy'''
+print(s)
+print(name[0])
+print(name[2:4])#substring
+print(name.strip())#space trimming
+print(len(name))
+print(name.lower())
+print(name.upper())
+name="sudeep , shubham , vikarant"
+print(name.replace("ar","t"))
+str="this is a "
+print(str+name)
+str="rohan"
+temp="this is a {} and he is a good boy named {}".format(name,str)
+print(temp)
+temp="this is a {1} and he is a good boy named {0}".format(name,str)
+print(temp)
+temp=f"this is a {name}"
+print(temp)
+print(a**b)
+print(a//b)
+print(a%b)
+'''
+python collections:
+1.List
+2.Tuple
+3.set
+4.Dictionary
+'''
+lst=[2,3,5,7,4,5,41,6]
+print(lst)
+print(type(lst))
+print(lst[2:5])
+print(len(lst))
+lst.append(100)
+print(lst)
+lst.insert(1,200)
+print(lst)
+lst.remove(5)#it remove by value
+print(lst)
+del lst[3]#it remove by position
+print(lst)
+print(lst.clear())
+
+
+'''
+tuple items can not be changed
+'''
+a=("sudeep","shubh","rohan")
+print(type(a))
+#can not do this
+# a[0]="vikrant"
+
+#typecasting
+a=list(a)
+#now u can change value
+a[0]="vikrant"
+print(a)
+
+''' 
+set : elements does not repeat here
+'''
+s1={23,2,2,2,2,2,7,3,2,1,2,2,12,7,6,3,12,}
+print(s1)
+s1.add(4444)
+print(s1)
+s1.update([224,764,876,345])
+print(s1)
+print(len(s1))
+(s1.remove(23))# if element not present throws error
+print(s1)
+s1.discard(2345345433)#if element not present no error 
+print(s1)
+#like list we can use : .pop , .clear , del
+#and .. intersection , union
+
+'''
+Dictionary 
+'''
+sudeepDict={
+           "name":"sudeep",
+           "class":"4th",
+           "marks":"34",
+           "hours in school":6
+}
+print(sudeepDict)
+print(sudeepDict["marks"])
+sudeepDict["marks"]=56
+print(sudeepDict)
+sudeepDict.pop("marks")
+print(sudeepDict)
+#can use functions like del,clear,pop,update
+
+
+#age = input("Enter your age\n")#always take input in string then typecasting
+age=20
+age = int(age)
+print(age)
+if(age>18):
+    print("you can drive")
+    age=age+10
+    print(age)
+elif(age==18):
+    print("you are a awsome teen")    
+else:
+    print("you can not drive")
+
+
+'''
+loops
+'''
+for i in range(0,10,2):
+    print(i)
+
+li=[1,233,"this"]
+for item in li:      # for loop used for list
+    print("",item)
+
+print("\n")
+tu=("sudeep","shubh","rohan")
+for name in tu:                #for  loop used for tuple 
+    print(" ",name)
+
+print("\n")
+se={3,4,5,4,3,3,3,4,5,3,34,}
+for nu in se:                  # forloop used for set
+    print("  ",nu)
+
+
+dic={
+    "name":"sudeep",
+    "class":"4th",
+    "roll no":"25"
+}
+for di in dic:                #for loop used for dictionary
+    print(di)
+    print(dic["name"])
+    
+i=0
+while(i<7):                  # while loop used to print
+    i=i+1
+    if i==2:
+        continue
+    if i==5:
+        break
+    print(i)
+
+
+'''
+functions
+'''
+def great():
+    print("good morning sir")
+
+great()
+
+
+def sum(a,b):
+    return a+b
+
+print(sum(44,32))
+
+def sub(a,b):
+    return a-b
+
+print(sub(32,23))
+
+'''
+class
+'''
+class employee:
+    def __init__(self,gname,gsalary):
+        self.name =gname
+        self.salary=gsalary
+
+sudeep =employee("sudeep",34)
+print(sudeep.name)
+print(sudeep.salary)
+
